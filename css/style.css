@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --basic-black: #000000;
   --basic-red: #fb565a;
@@ -12,6 +33,8 @@
   --presentation-btn: #efc849;
   --presentation-btn-hover: #eab534;
   --presentation-btn-active: #e5a722;
+  --light-gray: rgba(255, 255, 255, 0.3);
+  --background-gray: #eeeeee;
 
 }
 
@@ -24,22 +47,22 @@ body {
   font-weight: 400;
   line-height: 24px;
   color: var(--basic-black);
-  background-color: #ffffff;
+  background-color: var(--basic-white);
 }
 
 .main-header {
-  background-color: #eeeeee;
+  background-color: var(--background-gray);
 }
 
 .main-slider {
-  background-color: #eeeeee;
+  background-color: var(--background-gray);
 }
 
 a {
   text-decoration: none;
 }
 
-.site-navigation {
+.clear-list {
   list-style: none;
 }
 
@@ -63,22 +86,21 @@ a {
   opacity: 0.3;
 }
 
-.main-navigation a.cart,
-.advantages-list a.advantages-button {
+.main-navigation .cart {
   color: var(--basic-black);
   font-weight: 500;
 }
 
-.main-navigation a.cart:hover {
+.main-navigation .cart:hover {
   color: var(--basic-red);
 }
 
-.main-navigation a.cart:active {
+.main-navigation .cart:active {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.slider-item p:nth-child(1) {
+.slider-item p:first-child {
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
@@ -97,13 +119,7 @@ a {
 
 .main-slider a:active {
   background-color: var(--basic-red-active);
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.advantages-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  color: var(--light-gray);
 }
 
 .advantages h3 {
@@ -113,58 +129,58 @@ a {
   text-transform: uppercase;
 }
 
-.advantages-list a.advantages-button {
+.advantages-button {
   padding: 17px 40px 15px 39px;
   border-radius: 3px;
   color: var(--basic-white);
 }
 
-.advantages-list a.advantages-button:active {
-  color: rgba(255, 255, 255, 0.3);
+.advantages-button:active {
+  color: var(--light-gray);
 }
 
-.advantages-list a.site-btn {
+.site-btn {
   background-color: var(--basic-red);
 }
 
-.advantages-item a.site-btn:hover {
+.site-btn:hover {
   background-color: var(--basic-red-hover);
 }
 
-.advantages-item a.site-btn:active {
+.site-btn:active {
   background-color: var(--basic-red-active);
 }
 
-.advantages-item a.app-btn {
+.app-btn {
   background-color: var(--app-btn);
 }
 
-.advantages-item a.app-btn:hover {
+.app-btn:hover {
   background-color: var(--app-btn-hover);
 }
 
-.advantages-item a.app-btn:active {
+.app-btn:active {
   background-color: var(--app-btn-active);
 }
 
-.advantages-item a.presentation-btn {
+.presentation-btn {
   background-color: var(--presentation-btn);
 }
 
-.advantages-item a.presentation-btn:hover {
+.presentation-btn:hover {
   background-color: var(--presentation-btn-hover);
 }
 
-.advantages-item a.presentation-btn:active {
+.presentation-btn:active {
   background-color: var(--presentation-btn-active);
 }
 
-.services .slogan {
+.slogan {
   font-size: 45px;
   line-height: 45px;
 }
 
-.services .text-uppercase {
+.text-uppercase {
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -181,12 +197,6 @@ a {
   line-height: 64px;
 }
 
-.partners-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .contacts-tel {
   color: inherit;
 }
@@ -194,9 +204,10 @@ a {
 .contacts h2 {
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 30px;
 }
 
-.contacts a.contacts-button {
+.contacts-button {
   padding: 17px 44px 15px 44px;
   color: var(--basic-white);
   background-color: var(--basic-red);
@@ -204,17 +215,13 @@ a {
   text-transform: uppercase;
 }
 
-.contacts a.contacts-button:hover {
+.contacts-button:hover {
   background-color: var(--basic-red-hover);
 }
 
-.contacts a.contacts-button:active {
+.contacts-button:active {
   background-color: var(--basic-red-active);
-  color:rgba(255, 255, 255, 0.3);
-}
-
-.social-list {
-  list-style: none;
+  color: var(--light-gray);
 }
 
 .cta-text {
