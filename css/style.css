@@ -27,12 +27,12 @@
   --basic-green: #00ca74;
   --basic-yellow: #efc849;
   --basic-white: #ffffff;
-  --app-btn: #00ca74;
-  --app-btn-hover: #00bc6c;
-  --app-btn-active: #00aa62;
-  --presentation-btn: #efc849;
-  --presentation-btn-hover: #eab534;
-  --presentation-btn-active: #e5a722;
+  --btn-green: #00ca74;
+  --btn-green-hover: #00bc6c;
+  --btn-green-active: #00aa62;
+  --btn-yellow: #efc849;
+  --btn-yellow-hover: #eab534;
+  --btn-yellow-active: #e5a722;
   --light-gray: rgba(255, 255, 255, 0.3);
   --background-gray: #eeeeee;
 
@@ -64,6 +64,8 @@ a {
 
 .clear-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-navigation a,
@@ -73,29 +75,16 @@ a {
   text-transform: uppercase;
 }
 
-.site-navigation a {
-  color: var(--basic-black);
-}
-
-.site-navigation a:hover {
-  color: var(--basic-red);
-}
-
-.site-navigation a:active {
-  color: var(--basic-black);
-  opacity: 0.3;
-}
-
-.main-navigation .cart {
+.main-navigation a {
   color: var(--basic-black);
   font-weight: 500;
 }
 
-.main-navigation .cart:hover {
+.main-navigation a:hover {
   color: var(--basic-red);
 }
 
-.main-navigation .cart:active {
+.main-navigation a:active {
   color: var(--basic-black);
   opacity: 0.3;
 }
@@ -106,20 +95,26 @@ a {
   line-height: 55px;
 }
 
-.main-slider a {
+.btn {
   background-color: var(--basic-red);
   color: var(--basic-white);
-  padding: 17px 54px 15px 54px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-radius: 3px;
 }
 
-.main-slider a:hover {
+.btn:hover {
   background-color: var(--basic-red-hover);
 }
 
-.main-slider a:active {
+.btn:active {
   background-color: var(--basic-red-active);
   color: var(--light-gray);
+}
+
+.slider-button {
+  padding-left: 54px;
+  padding-right: 54px;
 }
 
 .advantages h3 {
@@ -129,50 +124,33 @@ a {
   text-transform: uppercase;
 }
 
-.advantages-button {
-  padding: 17px 40px 15px 39px;
-  border-radius: 3px;
-  color: var(--basic-white);
+.advantages-item .btn {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-.advantages-button:active {
-  color: var(--light-gray);
+.btn-green {
+  background-color: var(--btn-green);
 }
 
-.site-btn {
-  background-color: var(--basic-red);
+.btn-green:hover {
+  background-color: var(--btn-green-hover);
 }
 
-.site-btn:hover {
-  background-color: var(--basic-red-hover);
+.btn-green:active {
+  background-color: var(--btn-green-active);
 }
 
-.site-btn:active {
-  background-color: var(--basic-red-active);
+.btn-yellow {
+  background-color: var(--btn-yellow);
 }
 
-.app-btn {
-  background-color: var(--app-btn);
+.btn-yellow:hover {
+  background-color: var(--btn-yellow-hover);
 }
 
-.app-btn:hover {
-  background-color: var(--app-btn-hover);
-}
-
-.app-btn:active {
-  background-color: var(--app-btn-active);
-}
-
-.presentation-btn {
-  background-color: var(--presentation-btn);
-}
-
-.presentation-btn:hover {
-  background-color: var(--presentation-btn-hover);
-}
-
-.presentation-btn:active {
-  background-color: var(--presentation-btn-active);
+.btn-yellow:active {
+  background-color: var(--btn-yellow-active);
 }
 
 .slogan {
@@ -208,24 +186,38 @@ a {
 }
 
 .contacts-button {
-  padding: 17px 44px 15px 44px;
-  color: var(--basic-white);
-  background-color: var(--basic-red);
-  border-radius: 3px;
+  padding-left: 44px;
+  padding-right: 44px;
   text-transform: uppercase;
-}
-
-.contacts-button:hover {
-  background-color: var(--basic-red-hover);
-}
-
-.contacts-button:active {
-  background-color: var(--basic-red-active);
-  color: var(--light-gray);
 }
 
 .cta-text {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+}
+
+.partners-list a {
+  opacity: 0.2;
+}
+
+.partners-list a:hover {
+  opacity: 1;
+}
+
+.partners-list a:active {
+  opacity: 0.1;
+}
+
+.studio {
+  text-decoration: underline;
+  text-decoration-color: var(--basic-red);
+}
+
+.main-header-logo:hover {
+  opacity: 0.7;
+}
+
+.main-header-logo:active {
+  opacity: 0.3;
 }
