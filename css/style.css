@@ -45,7 +45,7 @@
 
 }
 
-body {
+.page-body {
   min-width: 1440px;
   margin: 0;
   padding: 0;
@@ -55,13 +55,17 @@ body {
   line-height: 24px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .main-header {
-  background-color: var(--background-gray);
+  padding-top: 50px;
 }
 
-.main-slider {
+.main-bg {
   background-color: var(--background-gray);
 }
 
@@ -69,9 +73,24 @@ a {
   text-decoration: none;
 }
 
+.page {
+  height: 100%;
+}
+
 .clear-list {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.main-navigation-bar {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -94,6 +113,12 @@ a {
 .main-navigation a:active {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.slider-list {
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .slider-item p:first-child {
@@ -124,11 +149,32 @@ a {
   padding-right: 54px;
 }
 
+.advantages-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
+  margin-bottom: 80px;
+}
+
 .advantages h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 73px;
+}
+
+.line-gray {
+  border-top: 2px solid var(--background-gray);
+}
+
+.services h2 {
+  margin: 0;
 }
 
 .advantages-item .btn {
@@ -202,6 +248,23 @@ a {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+}
+
+.partners-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  border-top: 2px solid var(--background-gray);
+  border-bottom: 2px solid var(--background-gray);
+  height: 184px;
+}
+
+.partners {
+  margin-bottom: 80px;
+}
+
+.contacts-list h2 {
+  margin-top: 0;
 }
 
 .partners-list a {
@@ -356,4 +419,29 @@ a {
   width: 44px;
   height: 44px;
   line-height: 47px;
+}
+
+.contact-list {
+  background-color: var(--basic-white);
+  width: 319px;
+  height: 308px;
+}
+
+.contacts-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contacts {
+  margin-bottom: 68px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.main-footer {
+  margin-bottom: 68px;
 }
