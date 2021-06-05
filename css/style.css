@@ -85,7 +85,7 @@ a {
 
 .main-navigation-bar {
   display: grid;
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: 160px 1fr min-content;
 }
 
 .container {
@@ -425,6 +425,7 @@ a {
   background-color: var(--basic-white);
   width: 319px;
   height: 308px;
+  justify-self: start;
 }
 
 .contacts-columns {
