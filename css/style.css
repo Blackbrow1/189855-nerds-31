@@ -391,6 +391,23 @@ a {
   color: var(--products-text);
 }
 
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 42px;
+}
+
+.heading-catalog {
+  padding-top: 32px;
+  padding-bottom: 108px;
+  margin-bottom: 55px;
+}
+
+.heading-catalog h1 {
+  font-size: 55px;
+  text-align: center;
+}
+
 .page-item {
   display: block;
   background-color: var(--background-gray);
