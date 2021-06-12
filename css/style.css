@@ -109,7 +109,7 @@ a {
 }
 
 .slider-item p {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 25px;
 }
 
@@ -229,10 +229,6 @@ a {
 
 .statistics {
   width: 360px;
-  height: 413px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-top: 39px;
 }
 
@@ -241,6 +237,10 @@ a {
   margin: 0;
   padding: 0;
   padding-right: 20px;
+}
+
+.statistics-content {
+  margin-top: 37px;
 }
 
 .statistics-content th {
@@ -252,34 +252,25 @@ a {
   margin-bottom: 31px;
 }
 
-.advantages-item .btn {
-  width: 160px;
-  height: 50px;
-  box-sizing: border-box;
-  text-align: center;
-  line-height: 20px;
-}
-
-.advantages-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .advantages-item h3 {
   margin: 0;
   margin-bottom: 16px;
 }
 
 .advantages-item p {
-  margin: 0;
   margin-bottom: 32px;
 }
 
 .advantages-item img {
   margin: 0;
   margin-bottom: 25px;
-  order: -1;
+}
+
+.advantages-item .btn {
+  box-sizing: border-box;
+  padding: 16px 40px;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .btn-green {
@@ -622,14 +613,12 @@ a {
 .contacts-button {
   box-sizing: border-box;
   display: inline-block;
-  height: 50px;
   min-width: 219px;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   line-height: 20px;
-  padding-left: 44px;
-  padding-right: 44px;
+  padding: 16px 44px;
 }
 
 .contacts-tel {
@@ -641,7 +630,7 @@ a {
   text-transform: uppercase;
   line-height: 30px;
   font-size: 18px;
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 23px;
 }
 
@@ -664,21 +653,17 @@ a {
   margin-bottom: 37px;
 }
 
-.contacts-map {
-  background: url("../img/map.png") no-repeat;
-  width: 1440px;
+.contacts-map img {
   height: 416px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
 }
 
-.map-marker {
-  background: url("../img/map-marker.png") no-repeat;
+.map-marker img {
   width: 231px;
   height: 190px;
   position: absolute;
   top: 70px;
-  left: 887px;
+  left: 895px;
 }
 
 .footer-columns {
@@ -705,7 +690,7 @@ a {
 }
 
 .cta p:first-child {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
