@@ -42,6 +42,7 @@
   --btn-gray-shadow: rgba(0, 1, 1, 0.1);
   --border-gray-btn: #dbdbdb;
   --products-text: #666666;
+  --products-description-gray: #4d4d4d;
 
 }
 
@@ -102,6 +103,12 @@ a {
 
 .site-navigation li {
   margin-right: 45px;
+  padding-bottom: 13px;
+  padding-top: 15px;
+}
+
+.study, .shop {
+  border-bottom: 2px solid var(--basic-red);
 }
 
 .slider-list h1 {
@@ -395,6 +402,46 @@ a {
   border-radius: 3px;
   text-align: center;
   vertical-align: middle;
+  margin-left: 11px;
+}
+
+.form-grid label:not(:last-child),
+.form-features label:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.form-grid label,
+.form-features label {
+  display: block;
+}
+
+.price-grid label {
+  text-transform: uppercase;
+}
+
+.form-price input[type="range"] {
+  width: 205px;
+}
+
+.price-grid {
+  width: 260px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px auto;
+  row-gap: 14px;
+}
+
+.price-grid label:last-child {
+  margin-left: auto;
+}
+
+.price-range {
+  grid-column: 1 / -1;
+}
+
+.price-range {
+  background-color: var(--background-gray);
+  border-radius: 3px;
 }
 
 .form-filter fieldset {
@@ -490,6 +537,59 @@ a {
   text-transform: uppercase;
 }
 
+.products-list li {
+  position: relative;
+}
+
+.products-description {
+  display: none;
+  position: absolute;
+  top: 394px;
+}
+
+.products-header {
+  width: 360px;
+  height: 40px;
+  background-color: var(--products-description-gray);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.products-header {
+  display: flex;
+  align-items: center;
+}
+
+.products-header-items {
+  display: flex;
+  align-items: center;
+}
+
+.products-header-items li {
+  width: 14px;
+  height: 14px;
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  margin-right: 9px;
+}
+
+.products-header-items li:first-child {
+  margin-left: 16px;
+}
+
+.products-list li:hover .products-header {
+  opacity: 0.12;
+}
+
+.products-list li:hover .products-description {
+  display: block;
+}
+
+.products-list img {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
 .products-list h3,
 .products-list p {
   margin: 0;
@@ -531,6 +631,8 @@ a {
   padding-top: 26px;
   padding-bottom: 44px;
   text-align: center;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .products-description p {
@@ -676,10 +778,6 @@ a {
   margin-bottom: 68px;
 }
 
-.form-filter label {
-  display: block;
-}
-
 .social-list {
   width: 260px;
   display: flex;
@@ -697,4 +795,5 @@ a {
 .cta p:last-child {
   margin: 0;
 }
+
 
