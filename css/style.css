@@ -44,6 +44,12 @@
   --products-text: #666666;
   --products-description-gray: #4d4d4d;
   --social-gray: #e1e1e1;
+  --form-checkbox: #e3e3e3;
+  --range-gray: #d7dcdf;
+  --range-green: #00ca74;
+  --toggle-gray: #ababab;
+  --toggle-shadow: #cfcfcf;
+  --price-controls-color: #283136;
 
 }
 
@@ -73,7 +79,7 @@
 }
 
 .slider-list {
-  margin-bottom:  80px;
+  margin-bottom:  70px;
 }
 
 a {
@@ -128,7 +134,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   width: 437px;
-  margin-left: auto;
+  margin-left: 202px;
   margin-right: auto;
 }
 
@@ -160,7 +166,7 @@ a {
   position: absolute;
   width: 760px;
   height: 431px;
-  left: 420px;
+  right: 0;
   bottom: 0;
   background: url("../img/smartphones-slide.png") no-repeat 0 0;
 }
@@ -187,7 +193,7 @@ a {
 
 .slider-item p {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .slider-item p:nth-child(2) {
@@ -253,14 +259,10 @@ a {
 }
 
 .slider-button {
-  width: 240px;
-  height: 50px;
   font-weight: 500;
   text-transform: uppercase;
-  line-height: 20px;
-  display: inline-block;
-  box-sizing: border-box;
-  text-align: center;
+  padding-left: 54px;
+  padding-right: 54px;
 }
 
 .advantages-list {
@@ -288,11 +290,30 @@ a {
 .services-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin-bottom: 73px;
+  margin-bottom: 70px;
 }
 
 .services-list li:not(:last-child) {
   margin-bottom: 23px;
+}
+
+.services-list li {
+  position: relative;
+  padding-left: 37px;
+}
+
+.services-list li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-red);
+}
+
+.services-list li:last-child::before {
+  height: 1px;
 }
 
 .line-gray {
@@ -316,7 +337,8 @@ a {
 }
 
 .statistics-content {
-  margin-top: 32px;
+  margin-top: 23px;
+  margin-left: 25px;
 }
 
 .statistics-content th {
@@ -326,6 +348,10 @@ a {
 .statistics-content caption {
   margin: 0;
   margin-bottom: 31px;
+}
+
+.statistics img {
+  margin-left: 30px;
 }
 
 .advantages-item h3 {
@@ -339,7 +365,7 @@ a {
 
 .advantages-item img {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .advantages-item .btn {
@@ -379,6 +405,7 @@ a {
   margin: 0;
   margin-top: 73px;
   margin-bottom: 32px;
+  font-weight: 500;
 }
 
 .services-description {
@@ -421,8 +448,8 @@ a {
   justify-content: space-around;
   border-top: 2px solid var(--background-gray);
   border-bottom: 2px solid var(--background-gray);
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 43px;
+  padding-bottom: 43px;
 }
 
 .partners {
@@ -476,7 +503,7 @@ a {
 
 .form-grid label:not(:last-child),
 .form-features label:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 23px;
 }
 
 .form-grid label,
@@ -488,29 +515,90 @@ a {
   text-transform: uppercase;
 }
 
-.form-price input[type="range"] {
-  width: 205px;
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
-.price-grid {
+.range-filter {
   width: 260px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80px auto;
-  row-gap: 14px;
+  margin-top: 49px;
 }
 
-.price-grid label:last-child {
-  margin-left: auto;
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.price-range {
-  grid-column: 1 / -1;
-}
-
-.price-range {
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: var(--background-gray);
   border-radius: 3px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--range-gray);
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--range-green);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--toggle-gray);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggle-shadow);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: var(--price-controls-color);
+  border: none;
+  border-radius: 3px;
+  background: var(--background-gray);
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .form-filter fieldset {
@@ -530,6 +618,36 @@ a {
 .form-filter legend {
   margin: 0;
   margin-bottom: 16px;
+}
+
+.form-features label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 42px;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  border: 3px solid var(--form-checkbox);
+  border-radius: 4px;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 0;
+  width: 20px;
+  height: 10px;
+  border-bottom: 5px solid var(--form-checkbox);
+  border-left: 5px solid var(--form-checkbox);
+  transform: rotate(-45deg);
 }
 
 .tech-title {
@@ -644,7 +762,7 @@ a {
   margin-left: 16px;
 }
 
-.products-list-item:hover .products-header {
+.products-list-item:hover .products-header-items {
   opacity: 0.12;
 }
 
@@ -824,9 +942,12 @@ a {
   margin-bottom: 37px;
 }
 
-.contacts-map img {
+.contacts-map  {
   height: 416px;
-  width: 100%;
+  width: 1440px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .map-marker img {
@@ -834,7 +955,7 @@ a {
   height: 190px;
   position: absolute;
   top: 70px;
-  left: 895px;
+  left: 887px;
 }
 
 .footer-columns {
@@ -845,6 +966,7 @@ a {
 
 .footer-social {
   margin-right: 139px;
+  margin-top: -10px;
 }
 
 .main-footer {
@@ -887,12 +1009,14 @@ a {
 }
 
 .cta p:first-child {
-  margin-top: 0;
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 
 .cta p:last-child {
   margin: 0;
 }
+
+
 
 
