@@ -168,29 +168,6 @@
           <div class="map-marker"><img src="img/map-marker.png" width="231" height="190" alt="Маркер"></div>
         </div>
         <div class="contacts-map"><img src="img/map.png" alt="Карта"></div>
-        <div class="modal">
-          <form class="modal-filter" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset>
-              <legend>Напишите нам</legend>
-              <ul class="modal-grid clear-list">
-                <li>
-                  <label for="name">Ваше имя:</label>
-                  <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-                </li>
-                <li>
-                  <label for="email">Ваш email:</label>
-                  <input type="email" name="email" id="email" placeholder="email@example.com ">
-                </li>
-                <li>
-                  <label for="text-letter">Текст письма:</label>
-                  <textarea name="text-letter" id="text-letter" cols="15" rows="4" placeholder="В свободной форме"></textarea>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="btn modal-btn" type="submit">Отправить</button>
-            <button class="close" type="button"><img src="img/closed-button.svg" alt="Крестик закрытия окна"></button>
-          </form>
-        </div>
       </section>
     </main>
 
@@ -217,5 +194,28 @@
         </section>
       </div>
     </footer>
+    <div class="modal">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="fieldset-clear">
+          <legend>Напишите нам</legend>
+          <ul class="modal-items clear-list">
+            <li>
+              <label for="name">Ваше имя:</label>
+              <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+            </li>
+            <li>
+              <label for="email">Ваш email:</label>
+              <input type="email" name="email" id="email" placeholder="email@example.com ">
+            </li>
+            <li>
+              <label for="text-letter">Текст письма:</label>
+              <textarea name="text-letter" id="text-letter" cols="15" rows="5" placeholder="В свободной форме"></textarea>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="btn modal-btn" type="submit">Отправить</button>
+        <button class="close" type="button" aria-label="Close"></button>
+      </form>
+    </div>
   </body>
 </html>
