@@ -1079,6 +1079,7 @@ a {
   border: none;
   padding-left: 44px;
   padding-right: 44px;
+  display: inline-block;
 }
 
 .contacts-tel {
@@ -1282,8 +1283,8 @@ a {
   border: none;
   background-color: transparent;
   position: absolute;
-  right: 90px;
-  top: 78px;
+  right: 110px;
+  top: 85px;
   cursor: pointer;
 }
 
