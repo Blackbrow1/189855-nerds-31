@@ -700,11 +700,13 @@ a {
   display: none;
 }
 
-.filter-input-checkbox:hover + label::before {
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before {
   opacity: 1;
 }
 
-.filter-input-checkbox:checked:hover + label::after {
+.filter-input-checkbox:checked:hover + label::after,
+.filter-input-checkbox:checked:focus + label::after {
   opacity: 1;
 }
 
@@ -738,11 +740,13 @@ a {
   opacity: 0.4;
 }
 
-.filter-input-radio:hover + label::before {
+.filter-input-radio:hover + label::before,
+.filter-input-radio:focus + label::before {
   opacity: 1;
 }
 
-.filter-input-radio:checked:hover + label::after {
+.filter-input-radio:checked:hover + label::after,
+.filter-input-radio:checked:focus + label::after {
   opacity: 1;
 }
 
