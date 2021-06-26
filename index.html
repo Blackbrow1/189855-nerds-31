@@ -35,14 +35,16 @@
         <section class="container">
           <h1 class="visually-hidden">Интернет-магазин Nёrd's</h1>
           <div class="slider-grid">
-            <div class="slider-item slider-item-smartfones">
-              <p>Долго, дорого,<br>
-                скрупулезно.</p>
-              <p>Математически выверенный дизайн<br>
-                для вашего сайта или мобильного приложения.</p>
-              <a class="slider-button btn" href="#">Узнать больше</a>
+            <div class="slide-smartphone">
+              <div class="slider-item slider-item-smartfones">
+                <p>Долго, дорого,<br>
+                  скрупулезно.</p>
+                <p>Математически выверенный дизайн<br>
+                  для вашего сайта или мобильного приложения.</p>
+                <a class="slider-button btn" href="#">Узнать больше</a>
+              </div>
             </div>
-            <div class="visually-hidden">
+            <div class="slide-monitor visually-hidden">
               <div class="slider-item slider-item-monitor">
                 <p>Любим математику<br>
                 как никто другой</p>
@@ -51,7 +53,7 @@
                 <a class="slider-button btn" href="#">Узнать больше</a>
               </div>
             </div>
-            <div class="visually-hidden">
+            <div class="slide-tablet visually-hidden">
               <div class="slider-item slider-item-tablet">
                 <p>Только ночь,<br>
                 только хардкор</p>
@@ -61,9 +63,9 @@
               </div>
             </div>
             <div class="slider-controls">
-              <button type="button" class="current" aria-label="Первый слайд"></button>
-              <button type="button" aria-label="Второй слайд"></button>
-              <button type="button" aria-label="Третий слайд"></button>
+              <button type="button" class="btn-slide-1 current" aria-label="Первый слайд"></button>
+              <button type="button" class="btn-slide-2" aria-label="Второй слайд"></button>
+              <button type="button" class="btn-slide-3" aria-label="Третий слайд"></button>
             </div>
           </div>
         </section>
@@ -210,7 +212,7 @@
           <ul class="modal-items clear-list">
             <li>
               <label for="name">Ваше имя:</label>
-              <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+              <input type="text" name="login" id="name" placeholder="Имя Фамилия">
             </li>
             <li>
               <label for="email">Ваш email:</label>
@@ -226,5 +228,7 @@
         <a href="#" class="close" aria-label="Закрыть форму обратной связи"></a>
       </form>
     </div>
+    <script src="js/modal.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
