@@ -83,7 +83,7 @@
 }
 
 .slider-list {
-  margin-bottom:  70px;
+  margin-bottom: 80px;
   position: relative;
 }
 
@@ -153,7 +153,7 @@ a {
   margin-right: 45px;
 }
 
-.study, .shop {
+.nav-item-active {
   border-bottom: 2px solid var(--basic-red);
 }
 
@@ -162,14 +162,18 @@ a {
 }
 
 .slider-item {
-  padding-top: 78px;
+  padding-top: 67px;
+  position: relative;
+}
+
+.slider-grid {
   position: relative;
 }
 
 .slider-controls {
   position: absolute;
   bottom: 96px;
-  left: 720px;
+  left: 535px;
   display: flex;
   width: 88px;
   justify-content: space-between;
@@ -186,16 +190,9 @@ a {
   cursor: pointer;
 }
 
-.slider-controls .current::before {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 2px;
-  height: 2px;
-  background-color: transparent;
-  border: 3px solid var(--slider-button);
-  border-radius: 50%;
+.slider-controls .current {
+  box-shadow: inset 0 0 0 5px var(--basic-white),
+              inset 0 0 0 7px var(--slider-button);
 }
 
 .slider-item-smartfones::after {
@@ -203,7 +200,7 @@ a {
   position: absolute;
   width: 760px;
   height: 431px;
-  right: 0;
+  right: 5px;
   bottom: 0;
   background: url("../img/smartphones-slide.png") no-repeat 0 0;
 }
@@ -230,7 +227,7 @@ a {
 
 .slider-item p {
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 27px;
 }
 
 .slider-item p:nth-child(2) {
@@ -334,7 +331,7 @@ a {
 }
 
 .services-list li:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
 .services-list li {
@@ -372,12 +369,11 @@ a {
 .statistics-content th:not(:last-child),
 .statistics-content td:not(:last-child) {
   margin: 0;
-  padding: 0;
   padding-right: 20px;
 }
 
 .statistics-content {
-  margin-top: 23px;
+  margin-top: 32px;
   margin-left: 25px;
 }
 
@@ -385,13 +381,23 @@ a {
   text-align: left;
 }
 
+.statistics-content td {
+  line-height: 18px;
+  padding-top: 10px;
+}
+
+.statistics-content sup {
+  font-size: 26px;
+}
+
 .statistics-content caption {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 27px;
+  margin-left: 15px;
 }
 
 .statistics img {
-  margin-left: 30px;
+  margin-left: 25px;
 }
 
 .advantages-item h3 {
@@ -461,7 +467,7 @@ a {
 
 .services-orders {
   margin: 0;
-  margin-bottom: 23px;;
+  margin-bottom: 24px;;
 }
 
 .text-uppercase {
@@ -496,6 +502,21 @@ a {
   border-bottom: 2px solid var(--background-gray);
   padding-top: 43px;
   padding-bottom: 43px;
+}
+
+.partners-list li {
+  position: relative;
+}
+
+.partners-list li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 52px;
+  background-color: var(--background-gray);
 }
 
 .partners {
@@ -537,18 +558,6 @@ a {
   padding: 0;
 }
 
-.form-filter input[type="text"] {
-  background-color: var(--background-gray);
-  border: none;
-  width: 80px;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  border-radius: 3px;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: 11px;
-}
-
 .form-grid label:not(:last-child),
 .form-features label:not(:last-child) {
   margin-bottom: 15px;
@@ -557,6 +566,7 @@ a {
 .form-grid label,
 .form-features label {
   display: block;
+  width: max-content;
 }
 
 .price-grid label {
@@ -637,8 +647,9 @@ a {
 }
 
 .price-controls input {
-  width: 60px;
-  padding: 10px;
+  width: 80px;
+  box-sizing: border-box;
+  padding: 8px;
   margin-left: 10px;
   text-align: center;
   color: var(--price-controls-color);
@@ -647,6 +658,12 @@ a {
   background: var(--background-gray);
   font-family: inherit;
   font-size: inherit;
+  line-height: 22px;
+}
+
+.price-controls input:active,
+.price-controls input:focus {
+  border-color: var(--basic-black);
 }
 
 .form-filter fieldset {
@@ -656,7 +673,7 @@ a {
 }
 
 .form-filter fieldset:nth-child(2) {
-  margin-bottom: 47px;
+  margin-bottom: 45px;
 }
 
 .form-filter fieldset:nth-child(3) {
@@ -665,7 +682,7 @@ a {
 
 .form-filter legend {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .form-features label {
@@ -848,6 +865,14 @@ a {
   opacity: 1;
 }
 
+.arrow-active {
+  opacity: 1;
+}
+
+.sort-item-active {
+  color: var(--basic-black);
+}
+
 .products-navigation {
   display: flex;
   justify-content: space-between;
@@ -857,8 +882,8 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
-  row-gap: 30px;
-  margin-bottom: 55px;
+  row-gap: 71px;
+  margin-bottom: 95px;
 }
 
 .products-description a:first-child {
@@ -879,28 +904,43 @@ a {
   left: 0;
 }
 
-.products-list-item img {
-  display: block;
+.products-list-item {
+  position: relative;
+  top: 39px;
 }
 
-.products-header-items {
+.products-list-item img {
+  display: block;
+  position: relative;
+}
+
+.products-list-item::before {
+  content: "";
+  position: absolute;
   width: 358px;
-  display: flex;
-  align-items: center;
+  height: 40px;
+  top: -40px;
+  left: 0;
   background-color: var(--products-description-gray);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  padding-top: 13px;
-  padding-bottom: 13px;
   opacity: 0.12;
+  z-index: 1;
 }
 
-.products-header-items li {
-  width: 14px;
+.products-list-item::after {
+  content: "";
+  position: absolute;
+  top: -27px;
+  left: 16px;
+  width: 62px;
   height: 14px;
-  background-color: var(--basic-white);
-  border-radius: 50%;
-  margin-right: 9px;
+  background: url(../img/points.svg) no-repeat 0 0;
+  z-index: 3;
+}
+
+.products-list-item:hover::before {
+  opacity: 1;
 }
 
 .products-header-items li:first-child {
@@ -913,6 +953,7 @@ a {
 
 .products-list-item:hover .products-description {
   display: block;
+  z-index: 1;
 }
 
 .products-list img {
@@ -965,7 +1006,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
 .products-page li:not(:last-child) {
@@ -977,6 +1018,7 @@ a {
 }
 
 .products-description {
+  display: block;
   box-sizing: border-box;
   background-color: var(--background-gray);
   width: 358px;
@@ -1004,7 +1046,7 @@ a {
   margin-top: 0;
   padding-top: 68px;
   padding-bottom: 108px;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
 }
 
 .heading-catalog h1 {
@@ -1050,7 +1092,7 @@ a {
   line-height: 47px;
 }
 
-.contacts {
+.contacts-columns {
   position: relative;
 }
 
@@ -1070,7 +1112,7 @@ a {
 }
 
 .main-content {
-  margin-bottom: 75px;
+  margin-bottom: 80px;
 }
 
 .contacts-button {
@@ -1080,6 +1122,7 @@ a {
   padding-left: 44px;
   padding-right: 44px;
   display: inline-block;
+  line-height: 18px;
 }
 
 .contacts-tel {
@@ -1127,13 +1170,12 @@ a {
   height: 190px;
   position: absolute;
   top: 70px;
-  left: 887px;
+  left: 707px;
 }
 
 .footer-columns {
   display: flex;
   align-items: center;
-
 }
 
 .footer-social {
@@ -1162,18 +1204,16 @@ a {
 }
 
 .social-button:hover {
-  background-color: var(--basic-red-active);
-  background: linear-gradient(0deg, var(--basic-red-hover), var(--basic-red-hover)), var(--basic-white);
+  background-color: var(--basic-red-hover);
 }
 
 .social-button:active path {
   fill: var(--light-gray);
-
 }
 
 .social-button:active {
   box-shadow: inset 0px 3px 0px var(--btn-gray-shadow);
-  background: linear-gradient(0deg, var(--basic-red-active), var(--basic-red-active)), var(--basic-white);
+  background-color: var(--basic-red-active);
 }
 
 .social-list li:not(:last-child) {
@@ -1191,7 +1231,6 @@ a {
 
 .modal {
   width: 760px;
-  margin: 0 auto;
   padding: 63px 100px 84px 100px;
   position: fixed;
   left: 50%;
@@ -1203,22 +1242,24 @@ a {
 }
 
 @keyframes bounce {
-  0% { transform: translateY(-2000px); }
-  70% { transform: translateY(30px); }
-  90% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% { transform: translate(-50%, -2000px); }
+  20% { transform: translate(-50%, -90%); }
+  50% { transform: translate(-50%, -80%); }
+  70% { transform: translate(-50%, -70%); }
+  90% { transform: translate(-50%, -60%); }
+  100% { transform: translate(-50%, -50%); }
 }
 
 .modal-show {
   display: block;
   animation-name: bounce;
-  animation-duration: 0.6s;
+  animation-duration: 0.2s;
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-  20%, 40%, 60%, 80% { transform: translateX(10px); }
+  0%, 100% { transform: translate(-50%, -50%); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-55%, -50%); }
+  20%, 40%, 60%, 80% { transform: translate(-45%, -55%); }
 }
 
 .modal-error {
@@ -1340,9 +1381,7 @@ a {
   background-color: var(--close-button-active);
 }
 
-.rub::before {
-  content: "\20BD";
+.rub {
+  font-family: "Verdana";
+  font-size: 15px;
 }
-
-
-
