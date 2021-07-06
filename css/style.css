@@ -55,6 +55,8 @@
   --modal-input-hover: #b4b9bb;
   --close-button: #feccce;
   --close-button-active: #ffeeef;
+  --auxiliary-text: #283136;
+  --footer-auxiliary-text: #444444;
 }
 
 .page-body {
@@ -232,6 +234,7 @@ a {
 
 .slider-item p:nth-child(2) {
   margin-bottom: 38px;
+  color: var(--auxiliary-text);
 }
 
 .slider-button {
@@ -337,6 +340,7 @@ a {
 .services-list li {
   position: relative;
   padding-left: 37px;
+  color: var(--auxiliary-text);
 }
 
 .services-list li::before {
@@ -350,7 +354,7 @@ a {
 }
 
 .services-list li:last-child::before {
-  height: 1px;
+  height: 2px;
 }
 
 .line-gray {
@@ -384,6 +388,7 @@ a {
 .statistics-content td {
   line-height: 18px;
   padding-top: 10px;
+  color: var(--auxiliary-text);
 }
 
 .statistics-content sup {
@@ -407,6 +412,7 @@ a {
 
 .advantages-item p {
   margin-bottom: 32px;
+  color: var(--auxiliary-text);
 }
 
 .advantages-item img {
@@ -463,11 +469,13 @@ a {
 .services-description {
   margin: 0;
   margin-bottom: 40px;
+  color: var(--auxiliary-text);
 }
 
 .services-orders {
   margin: 0;
-  margin-bottom: 24px;;
+  margin-bottom: 24px;
+  color: var(--auxiliary-text);
 }
 
 .text-uppercase {
@@ -567,6 +575,7 @@ a {
 .form-features label {
   display: block;
   width: max-content;
+  color: var(--auxiliary-text);
 }
 
 .price-grid label {
@@ -644,6 +653,7 @@ a {
   text-transform: uppercase;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
+  color: var(--auxiliary-text);
 }
 
 .price-controls input {
@@ -659,6 +669,7 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: 22px;
+  color: var(--auxiliary-text);
 }
 
 .price-controls input:active,
@@ -1139,6 +1150,7 @@ a {
 .contacts-list p {
   margin: 0;
   line-height: 18px;
+  color: var(--products-text);
 }
 
 .contacts-columns {
@@ -1225,6 +1237,7 @@ a {
 
 .cta p:last-child {
   margin: 0;
+  color: var(--footer-auxiliary-text);
 }
 
 .modal {
