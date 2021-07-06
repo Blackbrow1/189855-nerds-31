@@ -327,7 +327,7 @@ a {
 .services-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  margin-bottom: 70px;
+  margin-bottom: 74px;
 }
 
 .services-list li:not(:last-child) {
@@ -500,8 +500,8 @@ a {
   justify-content: space-around;
   border-top: 2px solid var(--background-gray);
   border-bottom: 2px solid var(--background-gray);
-  padding-top: 43px;
-  padding-bottom: 43px;
+  padding-top: 41px;
+  padding-bottom: 41px;
 }
 
 .partners-list li {
@@ -828,6 +828,7 @@ a {
   align-items: center;
   justify-content: space-between;
   margin-right: 47px;
+  margin-top: -5px;
 }
 
 .arrows {
@@ -836,20 +837,17 @@ a {
   justify-content: space-between;
 }
 
-.arrows button {
-  position: relative;
-}
-
 .arrow-down,
 .arrow-up {
-  position: relative;
-  top: -2px;
   width: 11px;
   height: 10px;
   background: url("../img/arrow-down.svg") no-repeat 0 0;
   border: none;
   background-color: transparent;
   opacity: 0.2;
+  display: block;
+  display: inline-block;
+  vertical-align: 15%;
 }
 
 .arrow-up {
@@ -1313,6 +1311,7 @@ a {
 
 .modal input:focus {
   border-color: var(--basic-black);
+  outline: none;
 }
 
 .modal input:focus::placeholder {
@@ -1325,6 +1324,7 @@ a {
 
 .modal textarea:focus {
   border-color: var(--basic-black);
+  outline: none;
 }
 
 .modal textarea:focus::placeholder {
@@ -1349,6 +1349,8 @@ a {
   border: none;
   background-color: transparent;
   position: absolute;
+  width: 25px;
+  height: 25px;
   right: 110px;
   top: 85px;
   cursor: pointer;
@@ -1358,6 +1360,8 @@ a {
 .close::after {
   content: "";
   position: absolute;
+  left: 25px;
+  top: 0;
   width: 27px;
   height: 4px;
   background-color: var(--close-button);
